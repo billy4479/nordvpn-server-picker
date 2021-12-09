@@ -70,7 +70,7 @@ func main() {
 			for _, c := range j.Children() {
 				cc := c.Search("code").Data().(string)
 				if strings.EqualFold(cc, *country) {
-					countryID = c.Search("id").Data().(int)
+					countryID = int(c.Search("id").Data().(float64))
 				}
 			}
 
